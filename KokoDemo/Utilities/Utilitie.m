@@ -62,4 +62,12 @@
     return [UIColor colorWithRed:236/255.0 green:0/255.0 blue:140/255.0 alpha:1.0];
 }
 
++ (UIColor *)getKoKosoftPinkColor {
+    return [UIColor colorWithRed:249/255.0 green:178/255.0 blue:220/255.0 alpha:1.0];
+}
+
++ (UIColor *)getKokoBrownGreyColor {
+    return [UIColor colorWithRed:153/255.0 green:153/255.0 blue:153/255.0 alpha:1.0];
+}
+
 @end

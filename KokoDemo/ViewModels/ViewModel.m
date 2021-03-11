@@ -16,7 +16,6 @@
 
 @property (nonatomic, strong) NetworkManager *networkManager;
 @property (nonatomic, strong) NSArray<FriendDisplay *> *friends;
-@property (nonatomic, strong) NSArray<FriendDisplay *> *inviteItems;
 
 
 @property (nonatomic, strong) UserInfoDisplay *userInfo;
@@ -168,5 +167,6 @@
         return obj2;
     }
 }
+
 
 @end

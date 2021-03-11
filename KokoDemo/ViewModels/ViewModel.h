@@ -15,6 +15,9 @@
 
 @interface ViewModel : NSObject
 
+@property (nonatomic, strong) NSArray<FriendDisplay *> *_Nullable inviteItems;
+
+
 - (void)getFriendURL:(NSString *_Nonnull)urlString
          WithSuccess:(void (^_Nullable)(NSArray<Friend *> * _Nullable))successCompletion
                error:(void (^_Nullable)(NSError * _Nonnull))errorCompletion;

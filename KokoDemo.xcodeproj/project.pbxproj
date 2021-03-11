@@ -7,8 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA33690625F9FB7D00C6ACC5 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA33690525F9FB7D00C6ACC5 /* TestViewController.m */; };
 		FA3E0D4925F8B2FB000018B8 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3E0D4725F8B2FB000018B8 /* CustomTableViewCell.m */; };
 		FA3E0D4A25F8B2FB000018B8 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3E0D4825F8B2FB000018B8 /* CustomTableViewCell.xib */; };
+		FA3E0D5425F9AB3F000018B8 /* InviteListView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3E0D5325F9AB3F000018B8 /* InviteListView.m */; };
+		FA3E0D5825F9C196000018B8 /* CustomSearchBarView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3E0D5725F9C196000018B8 /* CustomSearchBarView.m */; };
+		FA3E0D5E25F9D241000018B8 /* CustomBadge.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3E0D5D25F9D241000018B8 /* CustomBadge.m */; };
+		FA3E0D6225F9E0B6000018B8 /* CustomTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3E0D6125F9E0B5000018B8 /* CustomTabBar.m */; };
 		FA798F1A25F879F2002DE3E9 /* UserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA798F1925F879F2002DE3E9 /* UserInfoView.m */; };
 		FA798F2025F87CC4002DE3E9 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA798F1F25F87CC4002DE3E9 /* MainViewController.m */; };
 		FA798F2425F8971F002DE3E9 /* MiddleView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA798F2325F8971F002DE3E9 /* MiddleView.m */; };
@@ -23,6 +28,9 @@
 		FAB1A89F25F7141C00D34A51 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB1A89E25F7141C00D34A51 /* UserInfo.m */; };
 		FAB1A8A225F7168A00D34A51 /* FriendFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB1A8A125F7168A00D34A51 /* FriendFetcher.m */; };
 		FAB1A8AB25F75B0000D34A51 /* Utilitie.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB1A8AA25F75B0000D34A51 /* Utilitie.m */; };
+		FAB7077D25F9E8670042CE78 /* AppConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB7077C25F9E8670042CE78 /* AppConfig.m */; };
+		FAB7078025F9E99F0042CE78 /* Start.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAB7077F25F9E99F0042CE78 /* Start.storyboard */; };
+		FAB7078725F9EAB80042CE78 /* StartViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB7078625F9EAB80042CE78 /* StartViewController.m */; };
 		FAB73A4C25F77D0F000E397E /* UserInfoFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB73A4B25F77D0F000E397E /* UserInfoFetcher.m */; };
 		FAB73A4F25F77E91000E397E /* UserInfoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB73A4E25F77E91000E397E /* UserInfoParser.m */; };
 		FADF732F25F8F6B80099B920 /* CustomSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF732E25F8F6B80099B920 /* CustomSegmentedControl.m */; };
@@ -36,9 +44,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA33690425F9FB7D00C6ACC5 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
+		FA33690525F9FB7D00C6ACC5 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		FA3E0D4625F8B2FB000018B8 /* CustomTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		FA3E0D4725F8B2FB000018B8 /* CustomTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		FA3E0D4825F8B2FB000018B8 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		FA3E0D5225F9AB3F000018B8 /* InviteListView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InviteListView.h; sourceTree = "<group>"; };
+		FA3E0D5325F9AB3F000018B8 /* InviteListView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InviteListView.m; sourceTree = "<group>"; };
+		FA3E0D5625F9C196000018B8 /* CustomSearchBarView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomSearchBarView.h; sourceTree = "<group>"; };
+		FA3E0D5725F9C196000018B8 /* CustomSearchBarView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomSearchBarView.m; sourceTree = "<group>"; };
+		FA3E0D5C25F9D241000018B8 /* CustomBadge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomBadge.h; sourceTree = "<group>"; };
+		FA3E0D5D25F9D241000018B8 /* CustomBadge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomBadge.m; sourceTree = "<group>"; };
+		FA3E0D6025F9E0B5000018B8 /* CustomTabBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTabBar.h; sourceTree = "<group>"; };
+		FA3E0D6125F9E0B5000018B8 /* CustomTabBar.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTabBar.m; sourceTree = "<group>"; };
 		FA798F1825F879F2002DE3E9 /* UserInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoView.h; sourceTree = "<group>"; };
 		FA798F1925F879F2002DE3E9 /* UserInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoView.m; sourceTree = "<group>"; };
 		FA798F1E25F87CC4002DE3E9 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
@@ -67,6 +85,11 @@
 		FAB1A8A425F717F900D34A51 /* DataFetcherProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataFetcherProtocol.h; sourceTree = "<group>"; };
 		FAB1A8A925F75B0000D34A51 /* Utilitie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilitie.h; sourceTree = "<group>"; };
 		FAB1A8AA25F75B0000D34A51 /* Utilitie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utilitie.m; sourceTree = "<group>"; };
+		FAB7077B25F9E8670042CE78 /* AppConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConfig.h; sourceTree = "<group>"; };
+		FAB7077C25F9E8670042CE78 /* AppConfig.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppConfig.m; sourceTree = "<group>"; };
+		FAB7077F25F9E99F0042CE78 /* Start.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Start.storyboard; sourceTree = "<group>"; };
+		FAB7078525F9EAB80042CE78 /* StartViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StartViewController.h; sourceTree = "<group>"; };
+		FAB7078625F9EAB80042CE78 /* StartViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = StartViewController.m; sourceTree = "<group>"; };
 		FAB73A4A25F77D0F000E397E /* UserInfoFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoFetcher.h; sourceTree = "<group>"; };
 		FAB73A4B25F77D0F000E397E /* UserInfoFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoFetcher.m; sourceTree = "<group>"; };
 		FAB73A4D25F77E91000E397E /* UserInfoParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoParser.h; sourceTree = "<group>"; };
@@ -101,18 +124,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA33690325F9FB6F00C6ACC5 /* TestView */ = {
+			isa = PBXGroup;
+			children = (
+				FA33690425F9FB7D00C6ACC5 /* TestViewController.h */,
+				FA33690525F9FB7D00C6ACC5 /* TestViewController.m */,
+			);
+			path = TestView;
+			sourceTree = "<group>";
+		};
 		FA798F1625F879AB002DE3E9 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				FAB7077825F9E71B0042CE78 /* CustomView */,
 				FA798F1E25F87CC4002DE3E9 /* MainViewController.h */,
 				FA798F1F25F87CC4002DE3E9 /* MainViewController.m */,
-				FA798F1825F879F2002DE3E9 /* UserInfoView.h */,
-				FA798F1925F879F2002DE3E9 /* UserInfoView.m */,
-				FA798F2225F8971F002DE3E9 /* MiddleView.h */,
-				FA798F2325F8971F002DE3E9 /* MiddleView.m */,
-				FA3E0D4625F8B2FB000018B8 /* CustomTableViewCell.h */,
-				FA3E0D4725F8B2FB000018B8 /* CustomTableViewCell.m */,
-				FA3E0D4825F8B2FB000018B8 /* CustomTableViewCell.xib */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -138,6 +164,7 @@
 			children = (
 				FAAF41DB25F61E300020DB95 /* Assets.xcassets */,
 				FAAF41DD25F61E300020DB95 /* LaunchScreen.storyboard */,
+				FAB7077F25F9E99F0042CE78 /* Start.storyboard */,
 				FAAF41D825F61E2F0020DB95 /* Main.storyboard */,
 				FAAF41E125F61E300020DB95 /* main.m */,
 				FAAF41E025F61E300020DB95 /* Info.plist */,
@@ -162,15 +189,69 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		FAB7077625F9E6EA0042CE78 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				FA3E0D6025F9E0B5000018B8 /* CustomTabBar.h */,
+				FA3E0D6125F9E0B5000018B8 /* CustomTabBar.m */,
+				FA798F3D25F8A707002DE3E9 /* CustomTabBarViewController.h */,
+				FA798F3E25F8A707002DE3E9 /* CustomTabBarViewController.m */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		FAB7077725F9E6F90042CE78 /* UISegmentedControl */ = {
+			isa = PBXGroup;
+			children = (
+				FA3E0D5C25F9D241000018B8 /* CustomBadge.h */,
+				FA3E0D5D25F9D241000018B8 /* CustomBadge.m */,
+				FADF732D25F8F6B80099B920 /* CustomSegmentedControl.h */,
+				FADF732E25F8F6B80099B920 /* CustomSegmentedControl.m */,
+			);
+			path = UISegmentedControl;
+			sourceTree = "<group>";
+		};
+		FAB7077825F9E71B0042CE78 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				FAB7078925F9F2F40042CE78 /* Invite */,
+				FAB7077925F9E7430042CE78 /* TableView */,
+				FA3E0D5625F9C196000018B8 /* CustomSearchBarView.h */,
+				FA3E0D5725F9C196000018B8 /* CustomSearchBarView.m */,
+				FA798F1825F879F2002DE3E9 /* UserInfoView.h */,
+				FA798F1925F879F2002DE3E9 /* UserInfoView.m */,
+				FA798F2225F8971F002DE3E9 /* MiddleView.h */,
+				FA798F2325F8971F002DE3E9 /* MiddleView.m */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		FAB7077925F9E7430042CE78 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				FA3E0D4625F8B2FB000018B8 /* CustomTableViewCell.h */,
+				FA3E0D4725F8B2FB000018B8 /* CustomTableViewCell.m */,
+				FA3E0D4825F8B2FB000018B8 /* CustomTableViewCell.xib */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		FAB7078925F9F2F40042CE78 /* Invite */ = {
+			isa = PBXGroup;
+			children = (
+				FADF733025F8FECE0099B920 /* InviteItemView.h */,
+				FADF733125F8FECE0099B920 /* InviteItemView.m */,
+				FA3E0D5225F9AB3F000018B8 /* InviteListView.h */,
+				FA3E0D5325F9AB3F000018B8 /* InviteListView.m */,
+			);
+			path = Invite;
+			sourceTree = "<group>";
+		};
 		FADF732C25F8F6970099B920 /* CustomView */ = {
 			isa = PBXGroup;
 			children = (
-				FA798F3D25F8A707002DE3E9 /* CustomTabBarViewController.h */,
-				FA798F3E25F8A707002DE3E9 /* CustomTabBarViewController.m */,
-				FADF732D25F8F6B80099B920 /* CustomSegmentedControl.h */,
-				FADF732E25F8F6B80099B920 /* CustomSegmentedControl.m */,
-				FADF733025F8FECE0099B920 /* InviteItemView.h */,
-				FADF733125F8FECE0099B920 /* InviteItemView.m */,
+				FAB7077725F9E6F90042CE78 /* UISegmentedControl */,
+				FAB7077625F9E6EA0042CE78 /* TabBar */,
 				FADF733325F901020099B920 /* CustomLabel.h */,
 				FADF733425F901020099B920 /* CustomLabel.m */,
 				FADF733625F909BE0099B920 /* GradualView.h */,
@@ -186,6 +267,10 @@
 				FAAF41D025F61E2E0020DB95 /* AppDelegate.m */,
 				FAAF41D225F61E2E0020DB95 /* SceneDelegate.h */,
 				FAAF41D325F61E2E0020DB95 /* SceneDelegate.m */,
+				FAB7077B25F9E8670042CE78 /* AppConfig.h */,
+				FAB7077C25F9E8670042CE78 /* AppConfig.m */,
+				FAB7078525F9EAB80042CE78 /* StartViewController.h */,
+				FAB7078625F9EAB80042CE78 /* StartViewController.m */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -204,6 +289,7 @@
 		FAE244B625F65BCA00FCCDAE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				FA33690325F9FB6F00C6ACC5 /* TestView */,
 				FA798F1625F879AB002DE3E9 /* Main */,
 				FAAF41E825F61EA30020DB95 /* LaunchScreenViewController.h */,
 				FAAF41E925F61EA30020DB95 /* LaunchScreenViewController.m */,
@@ -302,6 +388,7 @@
 			files = (
 				FAAF41DF25F61E300020DB95 /* LaunchScreen.storyboard in Resources */,
 				FAAF41DC25F61E300020DB95 /* Assets.xcassets in Resources */,
+				FAB7078025F9E99F0042CE78 /* Start.storyboard in Resources */,
 				FA3E0D4A25F8B2FB000018B8 /* CustomTableViewCell.xib in Resources */,
 				FAAF41DA25F61E2F0020DB95 /* Main.storyboard in Resources */,
 			);
@@ -316,10 +403,13 @@
 			files = (
 				FAB73A4F25F77E91000E397E /* UserInfoParser.m in Sources */,
 				FA798F2425F8971F002DE3E9 /* MiddleView.m in Sources */,
+				FA3E0D5425F9AB3F000018B8 /* InviteListView.m in Sources */,
 				FADF732F25F8F6B80099B920 /* CustomSegmentedControl.m in Sources */,
 				FAAF41EA25F61EA30020DB95 /* LaunchScreenViewController.m in Sources */,
 				FADF733225F8FECE0099B920 /* InviteItemView.m in Sources */,
+				FA3E0D6225F9E0B6000018B8 /* CustomTabBar.m in Sources */,
 				FA798F1A25F879F2002DE3E9 /* UserInfoView.m in Sources */,
+				FAB7077D25F9E8670042CE78 /* AppConfig.m in Sources */,
 				FAB1A89F25F7141C00D34A51 /* UserInfo.m in Sources */,
 				FAFEC7A625F670B2004B8F5A /* NetworkManager.m in Sources */,
 				FAB1A8A225F7168A00D34A51 /* FriendFetcher.m in Sources */,
@@ -328,14 +418,18 @@
 				FADF733825F909BE0099B920 /* GradualView.m in Sources */,
 				FAAF41D125F61E2E0020DB95 /* AppDelegate.m in Sources */,
 				FAAF41E225F61E300020DB95 /* main.m in Sources */,
+				FAB7078725F9EAB80042CE78 /* StartViewController.m in Sources */,
 				FAAF41D425F61E2E0020DB95 /* SceneDelegate.m in Sources */,
 				FAFEC7AD25F67393004B8F5A /* FriendParser.m in Sources */,
+				FA3E0D5825F9C196000018B8 /* CustomSearchBarView.m in Sources */,
 				FAB73A4C25F77D0F000E397E /* UserInfoFetcher.m in Sources */,
+				FA33690625F9FB7D00C6ACC5 /* TestViewController.m in Sources */,
 				FA798F3F25F8A707002DE3E9 /* CustomTabBarViewController.m in Sources */,
 				FADF733525F901020099B920 /* CustomLabel.m in Sources */,
 				FA798F2025F87CC4002DE3E9 /* MainViewController.m in Sources */,
 				FAFEC7AA25F672AB004B8F5A /* ViewModel.m in Sources */,
 				FA3E0D4925F8B2FB000018B8 /* CustomTableViewCell.m in Sources */,
+				FA3E0D5E25F9D241000018B8 /* CustomBadge.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

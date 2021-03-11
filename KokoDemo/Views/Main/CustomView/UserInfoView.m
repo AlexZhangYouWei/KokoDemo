@@ -42,9 +42,9 @@
 }
 
 - (void)setUserNameLabel {
-    self.userNameLabel.frame = CGRectMake(30, 90, 52, 18);
+    self.userNameLabel.frame = CGRectMake(30, 46, 52, 18);
     [self.userNameLabel setFont:[UIFont boldSystemFontOfSize:17]];
-    self.userNameLabel.text = @"";
+    self.userNameLabel.text = kDefault_Username;
     self.userNameLabel.textColor = [UIColor colorWithRed:71/255.0 green:71/255.0 blue:71/255.0 alpha:1.0];
 
     [self addSubview:self.userNameLabel];
@@ -52,7 +52,7 @@
 
 
 - (void)setUserkokoIDlabel {
-    self.userKokoIDLabel.frame = CGRectMake(30, 116, 85, 18);
+    self.userKokoIDLabel.frame = CGRectMake(30, 72, 85, 18);
     [self.userKokoIDLabel setFont:[UIFont systemFontOfSize:13]];
     self.userKokoIDLabel.text = kDefault_KokoID;
     self.userKokoIDLabel.textColor = [UIColor colorWithRed:71/255.0 green:71/255.0 blue:71/255.0 alpha:1.0];
@@ -61,7 +61,7 @@
 }
 
 - (void)setUserPinkView {
-    self.userPinkView.frame = CGRectMake(148, 120, 10, 10);
+    self.userPinkView.frame = CGRectMake(148, 76, 10, 10);
     self.userPinkView.backgroundColor = [UIColor colorWithRed:236/255.0 green:0/255.0 blue:140/255.0 alpha:1.0];
     self.userPinkView.layer.cornerRadius = 6.0;
 
@@ -71,7 +71,7 @@
 
 - (void)setUserImageView {
     self.userImageView.frame = CGRectMake([Utilitie getScreenWidth] - 30 - 52,
-                                          82,
+                                          38,
                                           52,
                                           52);
     
@@ -81,7 +81,7 @@
 }
 
 - (void)setUserArrowImageView {
-    self.userArrowImageView.frame = CGRectMake(115, 116, 18, 18);
+    self.userArrowImageView.frame = CGRectMake(115, 72, 18, 18);
     [self.userArrowImageView setImage:[UIImage imageNamed:@"icInfoBackDeepGray"]];
     
     [self addSubview:self.userArrowImageView];

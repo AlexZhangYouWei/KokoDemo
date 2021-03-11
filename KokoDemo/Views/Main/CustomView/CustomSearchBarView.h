@@ -1,8 +1,8 @@
 //
-//  MainViewController.h
+//  CustomSearchBarView.h
 //  KokoDemo
 //
-//  Created by Alex Zhang on 2021/3/9.
+//  Created by Alex on 2021/3/11.
 //  Copyright © 2021 Alex Zhang. All rights reserved.
 //
 
@@ -10,7 +10,8 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface MainViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface CustomSearchBarView : UIView
+@property (nonatomic, strong) UISearchBar *searchBar;
 
 @end
 

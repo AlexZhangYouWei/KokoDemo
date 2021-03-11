@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 + (CGFloat)getScreenheight;
 
 + (UIColor *)getKoKoMainColor;
++ (UIColor *)getKoKosoftPinkColor;
++ (UIColor *)getKokoBrownGreyColor;
 @end
 
 NS_ASSUME_NONNULL_END

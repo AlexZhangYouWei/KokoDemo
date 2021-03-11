@@ -15,17 +15,22 @@
 #import "CustomSegmentedControl.h"
 #import "InviteItemView.h"
 #import "GradualView.h"
-
-
-#define kDataConfig 1
-
-@interface MainViewController ()
+#import "CustomSearchBarView.h"
+#import "AppConfig.h"
+#import "InviteListView.h"
+@interface MainViewController ()<UISearchBarDelegate>
+{
+    AppConfig *appconfig;
+}
+@property (strong, nonatomic) IBOutlet UIStackView *topStackView;
+@property (strong, nonatomic) IBOutlet MiddleView *noDataMiddleView;
+@property (strong, nonatomic) IBOutlet CustomSearchBarView *searbarView;
+@property (strong, nonatomic) IBOutlet UITableView *friendsTableView;
+@property (strong, nonatomic) IBOutlet InviteListView *inviteList;
 
 @property (nonatomic, strong) ViewModel * viewModel;
-@property (nonatomic, strong) UserInfoView *userInfoView;
+@property (nonatomic, strong) IBOutlet UserInfoView *userInfoView;
 @property (nonatomic, strong) UIView *selectView;
-@property (nonatomic, strong) MiddleView *middleView;
-@property (nonatomic, strong) UITableView *friendsTableView;
 @property (nonatomic, strong) UITableView *inviteItemsTableView;
 
 @property (nonatomic, strong) NSMutableArray *searchContentList;
@@ -45,86 +50,88 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    appconfig = [AppConfig sharedInstance];
     [self getData];
     [self setup];
     
     [self.viewModel addObserver:self forKeyPath:@"friends" options:NSKeyValueObservingOptionNew context:@"friendsChange"];
-    [self.viewModel addObserver:self forKeyPath:@"inviteItems" options:NSKeyValueObservingOptionNew context:@"friendsChange"];
+    [self.viewModel addObserver:self forKeyPath:@"inviteItems" options:NSKeyValueObservingOptionNew context:@"inviteItemsChange"];
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
 {
-    if (context == @"friendsChange") {
-        [self reloadData];
-    }
+    NSString *conStr = CFBridgingRelease(context);
+    [self reloadData:conStr];
 }
 
 - (void)setup {
     
-    self.userInfoView = [[UserInfoView alloc] initWithFrame:CGRectMake(0, 0, [Utilitie getScreenWidth], 137)];
-    [self.view addSubview:self.userInfoView];
-    
-    self.selectView = [[UIView alloc]initWithFrame:CGRectMake(0, 138, [Utilitie getScreenWidth], 192 - 164)];
-    [self.view addSubview:self.selectView];
-
-    if (kDataConfig == 1) {
-        self.middleView = [[MiddleView alloc] initWithFrame:CGRectMake(0, 192, [Utilitie getScreenWidth], 445)];
-        [self.view addSubview:self.middleView];
+    switch (appconfig.startModel) {
+            
+        case StartModel_NoFriend:
+            _searbarView.hidden = YES;
+            _friendsTableView.hidden = YES;
+            [_topStackView removeArrangedSubview:_inviteList];
+            break;
+            
+        case StartModel_OnlyFriend:
         
-    } else {
-        self.friendsTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 260, [Utilitie getScreenWidth], 445)];
-        self.friendsTableView.delegate = self;
-        self.friendsTableView.dataSource = self;
-        [self.view addSubview:self.friendsTableView];
+            _friendsTableView.delegate = self;
+            _friendsTableView.dataSource = self;
+            _noDataMiddleView.hidden = YES;
+            self.searbarView.searchBar.delegate = self;
+            
+//            UIView *listView = _topStackView.arrangedSubviews[1];
+//            listView.hidden = YES;
+            
+            
+            _friendsTableView.tableFooterView = [UIView new];
+            
+            
+            break;
+        
+        case StartModel_FriendAndinvite:
+            _friendsTableView.delegate = self;
+            _friendsTableView.dataSource = self;
+            _noDataMiddleView.hidden = YES;
+            _friendsTableView.tableFooterView = [UIView new];
+            
+            
+            break;
+            
     }
     
-    if (kDataConfig == 3) {
-        self.inviteItemsTableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 138, [Utilitie getScreenWidth], 100)];
-        self.inviteItemsTableView.delegate = self;
-        self.inviteItemsTableView.dataSource = self;
-        [self.view addSubview:self.inviteItemsTableView];
-    }
-
-//    self.searchbar = [[UISearchBar alloc] initWithFrame:CGRectMake(0, 60, [Utilitie getScreenWidth], 60)];
-//    self.searchbar.placeholder = @"想轉一筆給誰呢？";
-//    [self.view addSubview:self.searchbar];
     
-    
-    
-//    CustomSegmentedControl *seg = [[CustomSegmentedControl alloc] initWithItems:@[@"好友",@"聊天"]];
-//    seg.frame = CGRectMake(10, 200, 100, 40);
-//    
-//    [self.view addSubview:seg];
-//    
-//    InviteItemView *temp = [[InviteItemView alloc] initWithFrame:CGRectMake(30, 149, 315, 70)];
-//    temp.layer.borderWidth = 2.0;
-//    [self.view addSubview:temp];
-    
-    
-    GradualView *view = [[GradualView alloc] initWithFrame:CGRectMake(92, 537, 192, 40)];
-
-    [self.view addSubview:view];
 }
 
 
 - (void)getData {
     [self getUserInfoData];
-    [self getFriendData:kDataConfig];
+    [self getFriendData:appconfig.startModel];
 }
 
-- (void)reloadData {
+- (void)reloadData:(NSString *)context {
     NSLog(@"reLoad");
     __weak MainViewController *mainVC = self;
-    dispatch_async(dispatch_get_main_queue(), ^{
-        [mainVC.friendsTableView reloadData];
-        [mainVC.inviteItemsTableView reloadData];
-    });
+    if ([context  isEqualToString: @"friendsChange"]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [mainVC.friendsTableView reloadData];
+            [mainVC.inviteItemsTableView reloadData];
+            [mainVC.inviteList setData:self.viewModel.inviteItems];
+        });
+        
+    }else if ([context isEqualToString: @"inviteItems"]) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [mainVC.inviteList setData:self.viewModel.inviteItems];
+        });
+    }
+    
 }
 
 ///依照模式 呼叫對應的API
 - (void)getFriendData:(NSInteger)modelInt {
     
-
+    
     switch (modelInt) {
         case 1:
         {
@@ -144,7 +151,7 @@
             }];
             break;
         }
-       
+            
         case 3:
         {
             [self.viewModel getFriendURL:kAPIURL_friend3 WithSuccess:^(NSArray<Friend *> * _Nullable firends) {
@@ -165,11 +172,13 @@
     
     [self.viewModel getUserInfoURL:kAPIURL_UserInfo WithSuccess:^(UserInfo * _Nonnull userInfo) {
         dispatch_async(dispatch_get_main_queue(), ^{
+            
             self.userInfoView.userNameLabel.text = userInfo.name;
             self.userInfoView.userKokoIDLabel.text = [self.userInfoView.userKokoIDLabel.text stringByAppendingString:userInfo.kokoid];
-            self.userInfoView.userPinkView.hidden = YES;
+            self->_userInfoView.userPinkView.hidden = YES;
+            
         });
-
+        
     } error:^(NSError * _Nonnull error) {
         
     }];
@@ -197,7 +206,7 @@
     {
         return self.viewModel.numberOfinviteItems;
     }
-   
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -206,11 +215,11 @@
     if (cell == nil){
         NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"CustomTableViewCell" owner:nil options:nil];
         
-      for (UIView *view in views) {
-        if ([view isKindOfClass:[CustomTableViewCell class]]){
-          cell = (CustomTableViewCell *)view;
+        for (UIView *view in views) {
+            if ([view isKindOfClass:[CustomTableViewCell class]]){
+                cell = (CustomTableViewCell *)view;
+            }
         }
-      }
     }
     
     if (!cell) {
@@ -236,7 +245,11 @@
 
 #pragma mark - SearchBar Delegate
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-//    self.searchContentList =
+    NSLog(@"SearCh %@",searchText);
 }
 
+-(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    NSLog(@"开始输入搜索内容");
+
+}
 @end

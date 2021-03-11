@@ -1,17 +1,17 @@
 //
-//  CustomLabel.h
+//  TestViewController.h
 //  KokoDemo
 //
-//  Created by Alex Zhang on 2021/3/10.
+//  Created by Alex on 2021/3/11.
 //  Copyright © 2021 Alex Zhang. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
-#import "Utilitie.h"
+
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CustomLabel : UILabel
-- (void)setup;
+@interface TestViewController : UIViewController
+
 @end
 
 NS_ASSUME_NONNULL_END

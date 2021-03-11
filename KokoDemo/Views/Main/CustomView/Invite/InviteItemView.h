@@ -13,12 +13,13 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface InviteItemView : UIView
 @property (nonatomic, strong) UIImageView* imageView;
-@property (nonatomic, strong) CustomLabel* nameLabel;
+@property (nonatomic, strong) UILabel* nameLabel;
 @property (nonatomic, strong) UILabel* messageLabel;
 @property (nonatomic, strong) UIButton *friendsAgreeButton;
 @property (nonatomic, strong) UIButton *friendsDeletButton;
 
-
+- (void)setup;
+- (void)markUI;
 
 @end
 

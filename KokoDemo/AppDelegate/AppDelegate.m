@@ -22,6 +22,7 @@
                                           barMetrics:UIBarMetricsDefault];
 
     [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
+    
     return YES;
 }
 

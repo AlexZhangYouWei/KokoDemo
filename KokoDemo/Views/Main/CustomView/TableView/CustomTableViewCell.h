@@ -13,6 +13,9 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CustomTableViewCell : UITableViewCell
 @property (strong, nonatomic) IBOutlet UIImageView *startImage;
 @property (strong, nonatomic) IBOutlet UILabel *friendName;
+@property (strong, nonatomic) IBOutlet UILabel *liftLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *moreImageView;
+@property (strong, nonatomic) IBOutlet UILabel *rightLabel;
 
 - (void)setDisplay:(nullable FriendDisplay *)display;
 

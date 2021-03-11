@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pew-Vo-f40">
-    <device id="retina5_5" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pew-Vo-f40">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -12,10 +14,74 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="qzI-2k-17K">
+                                <rect key="frame" x="0.0" y="44" width="375" height="357"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fLu-MU-Odh" customClass="UserInfoView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+                                        <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="oXB-ud-LB5"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lme-yc-de9" customClass="InviteListView">
+                                        <rect key="frame" x="0.0" y="105" width="375" height="190"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4xE-2X-6Gg" customClass="CustomSegmentedControl">
+                                        <rect key="frame" x="0.0" y="300" width="375" height="57"/>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="lme-yc-de9" secondAttribute="trailing" id="8G1-tx-9us"/>
+                                    <constraint firstItem="fLu-MU-Odh" firstAttribute="leading" secondItem="qzI-2k-17K" secondAttribute="leading" id="SC3-Vu-SHM"/>
+                                    <constraint firstItem="4xE-2X-6Gg" firstAttribute="top" secondItem="qzI-2k-17K" secondAttribute="top" constant="300" id="cCY-1g-6uU"/>
+                                    <constraint firstItem="4xE-2X-6Gg" firstAttribute="top" secondItem="lme-yc-de9" secondAttribute="bottom" constant="5" id="cLW-bS-gfn"/>
+                                    <constraint firstItem="lme-yc-de9" firstAttribute="top" secondItem="fLu-MU-Odh" secondAttribute="bottom" constant="5" id="dqE-hE-KsX"/>
+                                    <constraint firstAttribute="trailing" secondItem="fLu-MU-Odh" secondAttribute="trailing" id="frc-tR-GnA"/>
+                                    <constraint firstItem="lme-yc-de9" firstAttribute="leading" secondItem="qzI-2k-17K" secondAttribute="leading" id="ggq-00-lVT"/>
+                                </constraints>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="F1z-0z-L2S" customClass="CustomSearchBarView">
+                                <rect key="frame" x="10" y="406" width="355" height="47"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tjc-pB-lMw">
+                                <rect key="frame" x="10" y="461" width="355" height="147"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="147" id="ncw-g9-hli"/>
+                                </constraints>
+                                <color key="sectionIndexBackgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <tableView key="tableFooterView" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="stL-a6-9JQ">
+                                    <rect key="frame" x="0.0" y="0.0" width="355" height="168"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </tableView>
+                            </tableView>
+                            <view contentMode="scaleToFill" id="CK8-R9-VNw" customClass="MiddleView">
+                                <rect key="frame" x="0.0" y="406" width="375" height="212"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="safeArea" id="p1I-0w-PDH"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="qzI-2k-17K" firstAttribute="trailing" secondItem="CK8-R9-VNw" secondAttribute="trailing" id="9TQ-CZ-CAj"/>
+                            <constraint firstItem="qzI-2k-17K" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Adk-9g-eYy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Tjc-pB-lMw" secondAttribute="bottom" constant="10" id="EBJ-T2-94R"/>
+                            <constraint firstAttribute="bottom" secondItem="qzI-2k-17K" secondAttribute="bottom" constant="266" id="U5e-A3-BQv"/>
+                            <constraint firstItem="qzI-2k-17K" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="WCP-PA-qVF"/>
+                            <constraint firstItem="Tjc-pB-lMw" firstAttribute="leading" secondItem="F1z-0z-L2S" secondAttribute="leading" id="an4-oD-Ovq"/>
+                            <constraint firstItem="F1z-0z-L2S" firstAttribute="top" secondItem="qzI-2k-17K" secondAttribute="bottom" constant="5" id="fys-Lr-kCN"/>
+                            <constraint firstItem="Tjc-pB-lMw" firstAttribute="trailing" secondItem="F1z-0z-L2S" secondAttribute="trailing" id="keg-aP-Dfs"/>
+                            <constraint firstItem="F1z-0z-L2S" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="mES-Qx-yCD"/>
+                            <constraint firstItem="Tjc-pB-lMw" firstAttribute="top" secondItem="F1z-0z-L2S" secondAttribute="bottom" constant="8" symbolic="YES" id="nug-ZO-YqI"/>
+                            <constraint firstItem="F1z-0z-L2S" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vZ0-Wp-umm"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="AxI-SM-7hj">
                         <leftBarButtonItems>
@@ -25,20 +91,28 @@
                         <barButtonItem key="rightBarButtonItem" title="Item" image="icNavPinkScan" id="Vft-a9-ZJ0"/>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="friendsTableView" destination="Tjc-pB-lMw" id="HdS-QL-WX3"/>
+                        <outlet property="inviteList" destination="lme-yc-de9" id="IHV-6A-674"/>
+                        <outlet property="noDataMiddleView" destination="CK8-R9-VNw" id="oVC-KD-N0L"/>
+                        <outlet property="searbarView" destination="F1z-0z-L2S" id="MPc-SE-e8m"/>
+                        <outlet property="topStackView" destination="qzI-2k-17K" id="gNZ-Kw-4v6"/>
+                        <outlet property="userInfoView" destination="fLu-MU-Odh" id="oWJ-dr-Faq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3236.2318840579715" y="-643.20652173913049"/>
+            <point key="canvasLocation" x="3236" y="-643.62818590704649"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="IH4-FT-YAY">
             <objects>
                 <viewController id="v7r-ci-fqb" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TN3-QF-QaV">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="uno-w4-gJU"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="icTabbarProductsOff" id="rlc-h3-vv5"/>
                 </viewController>
@@ -51,10 +125,10 @@
             <objects>
                 <viewController id="3Kl-lt-vj0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="woV-ch-l8f">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="q0C-tK-Xan"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="icTabbarManageOff" id="Rsh-9K-D61"/>
                 </viewController>
@@ -62,15 +136,15 @@
             </objects>
             <point key="canvasLocation" x="948" y="1018"/>
         </scene>
-        <!--View Controller-->
+        <!--Test View Controller-->
         <scene sceneID="4NT-Qk-Umi">
             <objects>
-                <viewController id="6eq-OO-Jsu" sceneMemberID="viewController">
+                <viewController id="6eq-OO-Jsu" customClass="TestViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ph9-FK-DcG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="FaZ-nc-YTm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="icTabbarSettingOff" id="JJL-LU-ZDJ"/>
                 </viewController>
@@ -81,7 +155,7 @@
         <!--Custom Tab Bar View Controller-->
         <scene sceneID="kll-ic-UrR">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="Pew-Vo-f40" customClass="CustomTabBarViewController" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="mySegueIdentifier" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="Pew-Vo-f40" customClass="CustomTabBarViewController" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="BsI-qP-wKV"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="imgTabbarBg" id="U6h-i6-ub0">
@@ -107,7 +181,7 @@
                     <tabBarItem key="tabBarItem" tag="1" title="" image="icTabbarFriendsOn" landscapeImage="icTabbarFriendsOn" selectedImage="icTabbarFriendsOn" id="lc7-ES-cOE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xEK-0q-cYg">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
@@ -130,5 +204,8 @@
         <image name="icTabbarProductsOff" width="28" height="46"/>
         <image name="icTabbarSettingOff" width="28" height="46"/>
         <image name="imgTabbarBg" width="375" height="68"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

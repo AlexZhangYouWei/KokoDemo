@@ -15,14 +15,23 @@
 // An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     // Drawing code
-    [self setup];
-    [self markUI];
+ 
+}
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        [self setup];
+        [self markUI];
+    }
+    return self;
 }
 
 - (void)setup {
     self.imageView = [[UIImageView alloc]initWithFrame:CGRectZero];
     self.messageLabel = [[UILabel alloc]initWithFrame:CGRectZero];
-    self.nameLabel = [[CustomLabel alloc]initWithFrame:CGRectZero];
+    self.nameLabel = [[UILabel alloc]initWithFrame:CGRectZero];
     self.friendsAgreeButton = [[UIButton alloc]initWithFrame:CGRectZero];
     self.friendsDeletButton = [[UIButton alloc]initWithFrame:CGRectZero];
 }
@@ -48,8 +57,8 @@
 - (void)setNameLabel {
     self.nameLabel.frame = CGRectMake(70, 14, 48, 22);
     self.nameLabel.text = @"張先生";
-//    self.nameLabel.backgroundColor = UIColor.redColor;
-//    self.nameLabel.textColor = [UIColor whiteColor];
+    self.nameLabel.textColor = [UIColor colorWithRed:71/255.0f green:71/255.0f blue:71/255.0f alpha:1.0];
+    [self.nameLabel setFont:[UIFont fontWithName:@"PingFangTC-Regular" size:16]];
     [self addSubview:self.nameLabel];
 }
 

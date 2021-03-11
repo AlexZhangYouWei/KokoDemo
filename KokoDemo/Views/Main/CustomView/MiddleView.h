@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "GradualView.h"
+#import "CustomLabel.h"
 NS_ASSUME_NONNULL_BEGIN
 @interface MiddleView : UIView
 @property (nonatomic, strong) UIImageView *DefaultImageView;
 @property (nonatomic, strong) UILabel *titleLabel;
 @property (nonatomic, strong) UILabel *messageLabel;
-@property (nonatomic, strong) UIView *customAddFriendView;
+@property (nonatomic, strong) GradualView *customAddFriendView;
 @property (nonatomic, strong) UILabel *commentaryLabel;
 
 @end
