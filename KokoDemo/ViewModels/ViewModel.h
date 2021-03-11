@@ -34,5 +34,6 @@
 - (FriendDisplay *_Nullable)friendsAtIndexPath:(NSIndexPath *_Nullable)indexPath;
 - (FriendDisplay *_Nullable)inviteItemsAtIndexPath:(NSIndexPath *_Nullable)indexPath;
 
+- (void)searchData:(NSString *_Nonnull)keyWord;
 @end
 

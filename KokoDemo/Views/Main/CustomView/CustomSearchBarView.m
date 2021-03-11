@@ -8,17 +8,16 @@
 
 #import "CustomSearchBarView.h"
 
-@interface CustomSearchBarView()
+@interface CustomSearchBarView()<UISearchBarDelegate>
 {
     UIImageView *imageView;
 }
+
 @end
 
 @implementation CustomSearchBarView
 
 
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
 - (void)drawRect:(CGRect)rect {
     // Drawing code
     [self setup];
@@ -28,12 +27,11 @@
 
 - (void)setup {
     imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
-    self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectZero];
+
 }
 
 - (void)markUI {
     [self setImageView];
-    [self setSearchBar];
 }
 
 - (void)setImageView {
@@ -42,12 +40,7 @@
     [self addSubview:imageView];
 }
 
-- (void)setSearchBar {
-    self.searchBar.frame = CGRectMake(30, 0, 276, 36);
-    self.searchBar.placeholder = @"想轉一筆給誰呢？";
-    self.searchBar.searchBarStyle = UISearchBarStyleMinimal;
-    [self addSubview:self.searchBar];
-}
+
 
 
 @end

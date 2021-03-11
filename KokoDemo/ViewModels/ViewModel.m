@@ -15,10 +15,12 @@
 @property (nonatomic, strong) id<UserInfoFetcherProtocol> userInfoFetcher;
 
 @property (nonatomic, strong) NetworkManager *networkManager;
+
 @property (nonatomic, strong) NSArray<FriendDisplay *> *friends;
 
 
 @property (nonatomic, strong) UserInfoDisplay *userInfo;
+@property (nonatomic, strong) NSMutableArray<FriendDisplay *> *searchResult;
 
 @end
 
@@ -168,5 +170,26 @@
     }
 }
 
+- (void)searchData:(NSString *)keyWord {
+    
+    if (keyWord.length == 0) {
+        return;
+    }
+    
+    if (self.searchResult == nil) {
+        self.searchResult = [[NSMutableArray alloc] init];
+    }
+    
+    for (FriendDisplay *obj in self.friends) {
+        if ([obj.name rangeOfString:keyWord].location == NSNotFound) {
+        } else {
+            [self.searchResult addObject:obj];
+        }
+    }
 
+}
+
+- (void)clearSearchResult {
+    [self.searchResult removeAllObjects];
+}
 @end

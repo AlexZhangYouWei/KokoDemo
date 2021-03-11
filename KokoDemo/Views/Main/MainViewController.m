@@ -34,7 +34,8 @@
 @property (nonatomic, strong) UITableView *inviteItemsTableView;
 
 @property (nonatomic, strong) NSMutableArray *searchContentList;
-@property (nonatomic) UISearchBar *searchbar;
+@property (nonatomic, strong) UISearchBar *searchBar;
+
 @end
 
 @implementation MainViewController
@@ -53,9 +54,9 @@
     appconfig = [AppConfig sharedInstance];
     [self getData];
     [self setup];
-    
     [self.viewModel addObserver:self forKeyPath:@"friends" options:NSKeyValueObservingOptionNew context:@"friendsChange"];
     [self.viewModel addObserver:self forKeyPath:@"inviteItems" options:NSKeyValueObservingOptionNew context:@"inviteItemsChange"];
+
 }
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context
@@ -79,8 +80,7 @@
             _friendsTableView.delegate = self;
             _friendsTableView.dataSource = self;
             _noDataMiddleView.hidden = YES;
-            self.searbarView.searchBar.delegate = self;
-            
+            [self setSearchBar];
 //            UIView *listView = _topStackView.arrangedSubviews[1];
 //            listView.hidden = YES;
             
@@ -95,7 +95,8 @@
             _friendsTableView.dataSource = self;
             _noDataMiddleView.hidden = YES;
             _friendsTableView.tableFooterView = [UIView new];
-            
+            [self setSearchBar];
+
             
             break;
             
@@ -243,13 +244,51 @@
     return [textField resignFirstResponder];
 }
 
+//滑動下拉 鍵盤下收
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    [self.view endEditing:YES];
+
+}
+
+- (void)touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
+    [self.view endEditing:YES];
+
+}
 #pragma mark - SearchBar Delegate
 - (void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
-    NSLog(@"SearCh %@",searchText);
+    NSLog(@"Search %@",searchText);
+    [self.viewModel searchData:searchText];
+//    self.topStackView.hidden = YES;
 }
 
--(void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
-    NSLog(@"开始输入搜索内容");
+- (void)searchBarTextDidBeginEditing:(UISearchBar *)searchBar {
+    CGRect frame = self.friendsTableView.frame;
+    self.friendsTableView.frame = CGRectMake(0, 200, frame.size.width,frame.size.height);
 
+    NSLog(@"StartSearch");
 }
+
+- (BOOL)searchBarShouldEndEditing:(UISearchBar *)searchBar {
+    NSLog(@"END");
+    [[UIApplication sharedApplication] sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil];
+    return YES;
+}
+
+
+
+- (void)setSearchBar {
+    
+    if (self.searchBar == nil) {
+        self.searchBar = [[UISearchBar alloc] initWithFrame:CGRectZero];
+    
+    }
+    self.searchBar.frame = CGRectMake(30, 0, 200, 36);
+    self.searchBar.placeholder = @"想轉一筆給誰呢？";
+    self.searchBar.searchBarStyle = UISearchBarStyleMinimal;
+    self.searchBar.delegate = self;
+    NSLog(@"Search %@",self.searchBar);
+    self.friendsTableView.tableHeaderView = self.searchBar;
+}
+
+
 @end
