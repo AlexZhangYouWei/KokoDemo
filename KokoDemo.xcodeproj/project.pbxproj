@@ -7,28 +7,87 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA3E0D4925F8B2FB000018B8 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3E0D4725F8B2FB000018B8 /* CustomTableViewCell.m */; };
+		FA3E0D4A25F8B2FB000018B8 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3E0D4825F8B2FB000018B8 /* CustomTableViewCell.xib */; };
+		FA798F1A25F879F2002DE3E9 /* UserInfoView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA798F1925F879F2002DE3E9 /* UserInfoView.m */; };
+		FA798F2025F87CC4002DE3E9 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA798F1F25F87CC4002DE3E9 /* MainViewController.m */; };
+		FA798F2425F8971F002DE3E9 /* MiddleView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA798F2325F8971F002DE3E9 /* MiddleView.m */; };
+		FA798F3F25F8A707002DE3E9 /* CustomTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA798F3E25F8A707002DE3E9 /* CustomTabBarViewController.m */; };
 		FAAF41D125F61E2E0020DB95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAF41D025F61E2E0020DB95 /* AppDelegate.m */; };
 		FAAF41D425F61E2E0020DB95 /* SceneDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAF41D325F61E2E0020DB95 /* SceneDelegate.m */; };
-		FAAF41D725F61E2E0020DB95 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAF41D625F61E2E0020DB95 /* ViewController.m */; };
 		FAAF41DA25F61E2F0020DB95 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAF41D825F61E2F0020DB95 /* Main.storyboard */; };
 		FAAF41DC25F61E300020DB95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAF41DB25F61E300020DB95 /* Assets.xcassets */; };
 		FAAF41DF25F61E300020DB95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAF41DD25F61E300020DB95 /* LaunchScreen.storyboard */; };
 		FAAF41E225F61E300020DB95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAF41E125F61E300020DB95 /* main.m */; };
+		FAAF41EA25F61EA30020DB95 /* LaunchScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FAAF41E925F61EA30020DB95 /* LaunchScreenViewController.m */; };
+		FAB1A89F25F7141C00D34A51 /* UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB1A89E25F7141C00D34A51 /* UserInfo.m */; };
+		FAB1A8A225F7168A00D34A51 /* FriendFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB1A8A125F7168A00D34A51 /* FriendFetcher.m */; };
+		FAB1A8AB25F75B0000D34A51 /* Utilitie.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB1A8AA25F75B0000D34A51 /* Utilitie.m */; };
+		FAB73A4C25F77D0F000E397E /* UserInfoFetcher.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB73A4B25F77D0F000E397E /* UserInfoFetcher.m */; };
+		FAB73A4F25F77E91000E397E /* UserInfoParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FAB73A4E25F77E91000E397E /* UserInfoParser.m */; };
+		FADF732F25F8F6B80099B920 /* CustomSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF732E25F8F6B80099B920 /* CustomSegmentedControl.m */; };
+		FADF733225F8FECE0099B920 /* InviteItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF733125F8FECE0099B920 /* InviteItemView.m */; };
+		FADF733525F901020099B920 /* CustomLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF733425F901020099B920 /* CustomLabel.m */; };
+		FADF733825F909BE0099B920 /* GradualView.m in Sources */ = {isa = PBXBuildFile; fileRef = FADF733725F909BE0099B920 /* GradualView.m */; };
+		FAE244B325F654B200FCCDAE /* Friend.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE244B225F654B200FCCDAE /* Friend.m */; };
+		FAFEC7A625F670B2004B8F5A /* NetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFEC7A525F670B2004B8F5A /* NetworkManager.m */; };
+		FAFEC7AA25F672AB004B8F5A /* ViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFEC7A925F672AB004B8F5A /* ViewModel.m */; };
+		FAFEC7AD25F67393004B8F5A /* FriendParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFEC7AC25F67393004B8F5A /* FriendParser.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FA3E0D4625F8B2FB000018B8 /* CustomTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
+		FA3E0D4725F8B2FB000018B8 /* CustomTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
+		FA3E0D4825F8B2FB000018B8 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		FA798F1825F879F2002DE3E9 /* UserInfoView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoView.h; sourceTree = "<group>"; };
+		FA798F1925F879F2002DE3E9 /* UserInfoView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoView.m; sourceTree = "<group>"; };
+		FA798F1E25F87CC4002DE3E9 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		FA798F1F25F87CC4002DE3E9 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		FA798F2225F8971F002DE3E9 /* MiddleView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MiddleView.h; sourceTree = "<group>"; };
+		FA798F2325F8971F002DE3E9 /* MiddleView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MiddleView.m; sourceTree = "<group>"; };
+		FA798F3D25F8A707002DE3E9 /* CustomTabBarViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTabBarViewController.h; sourceTree = "<group>"; };
+		FA798F3E25F8A707002DE3E9 /* CustomTabBarViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTabBarViewController.m; sourceTree = "<group>"; };
 		FAAF41CC25F61E2E0020DB95 /* KokoDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KokoDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAAF41CF25F61E2E0020DB95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		FAAF41D025F61E2E0020DB95 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		FAAF41D225F61E2E0020DB95 /* SceneDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SceneDelegate.h; sourceTree = "<group>"; };
 		FAAF41D325F61E2E0020DB95 /* SceneDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SceneDelegate.m; sourceTree = "<group>"; };
-		FAAF41D525F61E2E0020DB95 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		FAAF41D625F61E2E0020DB95 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		FAAF41D925F61E2F0020DB95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAAF41DB25F61E300020DB95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FAAF41DE25F61E300020DB95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FAAF41E025F61E300020DB95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAAF41E125F61E300020DB95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		FAAF41E825F61EA30020DB95 /* LaunchScreenViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LaunchScreenViewController.h; sourceTree = "<group>"; };
+		FAAF41E925F61EA30020DB95 /* LaunchScreenViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LaunchScreenViewController.m; sourceTree = "<group>"; };
+		FAB1A89D25F7141C00D34A51 /* UserInfo.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfo.h; sourceTree = "<group>"; };
+		FAB1A89E25F7141C00D34A51 /* UserInfo.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfo.m; sourceTree = "<group>"; };
+		FAB1A8A025F7168A00D34A51 /* FriendFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendFetcher.h; sourceTree = "<group>"; };
+		FAB1A8A125F7168A00D34A51 /* FriendFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendFetcher.m; sourceTree = "<group>"; };
+		FAB1A8A325F7174600D34A51 /* NetworkManagerProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManagerProtocol.h; sourceTree = "<group>"; };
+		FAB1A8A425F717F900D34A51 /* DataFetcherProtocol.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataFetcherProtocol.h; sourceTree = "<group>"; };
+		FAB1A8A925F75B0000D34A51 /* Utilitie.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Utilitie.h; sourceTree = "<group>"; };
+		FAB1A8AA25F75B0000D34A51 /* Utilitie.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Utilitie.m; sourceTree = "<group>"; };
+		FAB73A4A25F77D0F000E397E /* UserInfoFetcher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoFetcher.h; sourceTree = "<group>"; };
+		FAB73A4B25F77D0F000E397E /* UserInfoFetcher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoFetcher.m; sourceTree = "<group>"; };
+		FAB73A4D25F77E91000E397E /* UserInfoParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserInfoParser.h; sourceTree = "<group>"; };
+		FAB73A4E25F77E91000E397E /* UserInfoParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserInfoParser.m; sourceTree = "<group>"; };
+		FADF732D25F8F6B80099B920 /* CustomSegmentedControl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomSegmentedControl.h; sourceTree = "<group>"; };
+		FADF732E25F8F6B80099B920 /* CustomSegmentedControl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomSegmentedControl.m; sourceTree = "<group>"; };
+		FADF733025F8FECE0099B920 /* InviteItemView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InviteItemView.h; sourceTree = "<group>"; };
+		FADF733125F8FECE0099B920 /* InviteItemView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InviteItemView.m; sourceTree = "<group>"; };
+		FADF733325F901020099B920 /* CustomLabel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomLabel.h; sourceTree = "<group>"; };
+		FADF733425F901020099B920 /* CustomLabel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomLabel.m; sourceTree = "<group>"; };
+		FADF733625F909BE0099B920 /* GradualView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GradualView.h; sourceTree = "<group>"; };
+		FADF733725F909BE0099B920 /* GradualView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GradualView.m; sourceTree = "<group>"; };
+		FAE244B125F654B200FCCDAE /* Friend.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Friend.h; sourceTree = "<group>"; };
+		FAE244B225F654B200FCCDAE /* Friend.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Friend.m; sourceTree = "<group>"; };
+		FAFEC7A225F65E09004B8F5A /* Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Header.h; sourceTree = "<group>"; };
+		FAFEC7A425F670B2004B8F5A /* NetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NetworkManager.h; sourceTree = "<group>"; };
+		FAFEC7A525F670B2004B8F5A /* NetworkManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NetworkManager.m; sourceTree = "<group>"; };
+		FAFEC7A825F672AB004B8F5A /* ViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewModel.h; sourceTree = "<group>"; };
+		FAFEC7A925F672AB004B8F5A /* ViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewModel.m; sourceTree = "<group>"; };
+		FAFEC7AB25F67393004B8F5A /* FriendParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FriendParser.h; sourceTree = "<group>"; };
+		FAFEC7AC25F67393004B8F5A /* FriendParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FriendParser.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +101,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA798F1625F879AB002DE3E9 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				FA798F1E25F87CC4002DE3E9 /* MainViewController.h */,
+				FA798F1F25F87CC4002DE3E9 /* MainViewController.m */,
+				FA798F1825F879F2002DE3E9 /* UserInfoView.h */,
+				FA798F1925F879F2002DE3E9 /* UserInfoView.m */,
+				FA798F2225F8971F002DE3E9 /* MiddleView.h */,
+				FA798F2325F8971F002DE3E9 /* MiddleView.m */,
+				FA3E0D4625F8B2FB000018B8 /* CustomTableViewCell.h */,
+				FA3E0D4725F8B2FB000018B8 /* CustomTableViewCell.m */,
+				FA3E0D4825F8B2FB000018B8 /* CustomTableViewCell.xib */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
 		FAAF41C325F61E2E0020DB95 = {
 			isa = PBXGroup;
 			children = (
@@ -61,19 +136,107 @@
 		FAAF41CE25F61E2E0020DB95 /* KokoDemo */ = {
 			isa = PBXGroup;
 			children = (
+				FAAF41DB25F61E300020DB95 /* Assets.xcassets */,
+				FAAF41DD25F61E300020DB95 /* LaunchScreen.storyboard */,
+				FAAF41D825F61E2F0020DB95 /* Main.storyboard */,
+				FAAF41E125F61E300020DB95 /* main.m */,
+				FAAF41E025F61E300020DB95 /* Info.plist */,
+				FAFEC7A225F65E09004B8F5A /* Header.h */,
+				FAB1A8A825F75ADA00D34A51 /* Utilities */,
+				FAE244B425F65B9200FCCDAE /* AppDelegate */,
+				FAFEC7A325F66FA3004B8F5A /* Network */,
+				FAE244B525F65BAE00FCCDAE /* Models */,
+				FAFEC7A725F6726A004B8F5A /* ViewModels */,
+				FAE244B625F65BCA00FCCDAE /* Views */,
+			);
+			path = KokoDemo;
+			sourceTree = "<group>";
+		};
+		FAB1A8A825F75ADA00D34A51 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				FADF732C25F8F6970099B920 /* CustomView */,
+				FAB1A8A925F75B0000D34A51 /* Utilitie.h */,
+				FAB1A8AA25F75B0000D34A51 /* Utilitie.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		FADF732C25F8F6970099B920 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				FA798F3D25F8A707002DE3E9 /* CustomTabBarViewController.h */,
+				FA798F3E25F8A707002DE3E9 /* CustomTabBarViewController.m */,
+				FADF732D25F8F6B80099B920 /* CustomSegmentedControl.h */,
+				FADF732E25F8F6B80099B920 /* CustomSegmentedControl.m */,
+				FADF733025F8FECE0099B920 /* InviteItemView.h */,
+				FADF733125F8FECE0099B920 /* InviteItemView.m */,
+				FADF733325F901020099B920 /* CustomLabel.h */,
+				FADF733425F901020099B920 /* CustomLabel.m */,
+				FADF733625F909BE0099B920 /* GradualView.h */,
+				FADF733725F909BE0099B920 /* GradualView.m */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		FAE244B425F65B9200FCCDAE /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
 				FAAF41CF25F61E2E0020DB95 /* AppDelegate.h */,
 				FAAF41D025F61E2E0020DB95 /* AppDelegate.m */,
 				FAAF41D225F61E2E0020DB95 /* SceneDelegate.h */,
 				FAAF41D325F61E2E0020DB95 /* SceneDelegate.m */,
-				FAAF41D525F61E2E0020DB95 /* ViewController.h */,
-				FAAF41D625F61E2E0020DB95 /* ViewController.m */,
-				FAAF41D825F61E2F0020DB95 /* Main.storyboard */,
-				FAAF41DB25F61E300020DB95 /* Assets.xcassets */,
-				FAAF41DD25F61E300020DB95 /* LaunchScreen.storyboard */,
-				FAAF41E025F61E300020DB95 /* Info.plist */,
-				FAAF41E125F61E300020DB95 /* main.m */,
 			);
-			path = KokoDemo;
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		FAE244B525F65BAE00FCCDAE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FAE244B125F654B200FCCDAE /* Friend.h */,
+				FAE244B225F654B200FCCDAE /* Friend.m */,
+				FAB1A89D25F7141C00D34A51 /* UserInfo.h */,
+				FAB1A89E25F7141C00D34A51 /* UserInfo.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		FAE244B625F65BCA00FCCDAE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FA798F1625F879AB002DE3E9 /* Main */,
+				FAAF41E825F61EA30020DB95 /* LaunchScreenViewController.h */,
+				FAAF41E925F61EA30020DB95 /* LaunchScreenViewController.m */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FAFEC7A325F66FA3004B8F5A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				FAFEC7A425F670B2004B8F5A /* NetworkManager.h */,
+				FAFEC7A525F670B2004B8F5A /* NetworkManager.m */,
+				FAB1A8A325F7174600D34A51 /* NetworkManagerProtocol.h */,
+				FAB1A8A025F7168A00D34A51 /* FriendFetcher.h */,
+				FAB1A8A125F7168A00D34A51 /* FriendFetcher.m */,
+				FAFEC7AB25F67393004B8F5A /* FriendParser.h */,
+				FAFEC7AC25F67393004B8F5A /* FriendParser.m */,
+				FAB73A4A25F77D0F000E397E /* UserInfoFetcher.h */,
+				FAB73A4B25F77D0F000E397E /* UserInfoFetcher.m */,
+				FAB73A4D25F77E91000E397E /* UserInfoParser.h */,
+				FAB73A4E25F77E91000E397E /* UserInfoParser.m */,
+				FAB1A8A425F717F900D34A51 /* DataFetcherProtocol.h */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		FAFEC7A725F6726A004B8F5A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				FAFEC7A825F672AB004B8F5A /* ViewModel.h */,
+				FAFEC7A925F672AB004B8F5A /* ViewModel.m */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -92,6 +255,8 @@
 			dependencies = (
 			);
 			name = KokoDemo;
+			packageProductDependencies = (
+			);
 			productName = KokoDemo;
 			productReference = FAAF41CC25F61E2E0020DB95 /* KokoDemo.app */;
 			productType = "com.apple.product-type.application";
@@ -102,7 +267,7 @@
 		FAAF41C425F61E2E0020DB95 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1120;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Alex Zhang";
 				TargetAttributes = {
 					FAAF41CB25F61E2E0020DB95 = {
@@ -119,6 +284,8 @@
 				Base,
 			);
 			mainGroup = FAAF41C325F61E2E0020DB95;
+			packageReferences = (
+			);
 			productRefGroup = FAAF41CD25F61E2E0020DB95 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -135,6 +302,7 @@
 			files = (
 				FAAF41DF25F61E300020DB95 /* LaunchScreen.storyboard in Resources */,
 				FAAF41DC25F61E300020DB95 /* Assets.xcassets in Resources */,
+				FA3E0D4A25F8B2FB000018B8 /* CustomTableViewCell.xib in Resources */,
 				FAAF41DA25F61E2F0020DB95 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -146,10 +314,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAAF41D725F61E2E0020DB95 /* ViewController.m in Sources */,
+				FAB73A4F25F77E91000E397E /* UserInfoParser.m in Sources */,
+				FA798F2425F8971F002DE3E9 /* MiddleView.m in Sources */,
+				FADF732F25F8F6B80099B920 /* CustomSegmentedControl.m in Sources */,
+				FAAF41EA25F61EA30020DB95 /* LaunchScreenViewController.m in Sources */,
+				FADF733225F8FECE0099B920 /* InviteItemView.m in Sources */,
+				FA798F1A25F879F2002DE3E9 /* UserInfoView.m in Sources */,
+				FAB1A89F25F7141C00D34A51 /* UserInfo.m in Sources */,
+				FAFEC7A625F670B2004B8F5A /* NetworkManager.m in Sources */,
+				FAB1A8A225F7168A00D34A51 /* FriendFetcher.m in Sources */,
+				FAE244B325F654B200FCCDAE /* Friend.m in Sources */,
+				FAB1A8AB25F75B0000D34A51 /* Utilitie.m in Sources */,
+				FADF733825F909BE0099B920 /* GradualView.m in Sources */,
 				FAAF41D125F61E2E0020DB95 /* AppDelegate.m in Sources */,
 				FAAF41E225F61E300020DB95 /* main.m in Sources */,
 				FAAF41D425F61E2E0020DB95 /* SceneDelegate.m in Sources */,
+				FAFEC7AD25F67393004B8F5A /* FriendParser.m in Sources */,
+				FAB73A4C25F77D0F000E397E /* UserInfoFetcher.m in Sources */,
+				FA798F3F25F8A707002DE3E9 /* CustomTabBarViewController.m in Sources */,
+				FADF733525F901020099B920 /* CustomLabel.m in Sources */,
+				FA798F2025F87CC4002DE3E9 /* MainViewController.m in Sources */,
+				FAFEC7AA25F672AB004B8F5A /* ViewModel.m in Sources */,
+				FA3E0D4925F8B2FB000018B8 /* CustomTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,6 +387,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -259,6 +446,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -290,6 +478,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6GH2ZWT255;
 				INFOPLIST_FILE = KokoDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -297,7 +486,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = alex.KokoDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -306,6 +495,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 6GH2ZWT255;
 				INFOPLIST_FILE = KokoDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -313,7 +503,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = alex.KokoDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

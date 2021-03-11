@@ -1,15 +1,16 @@
 //
-//  AppDelegate.h
+//  APIURL.h
 //  KokoDemo
 //
 //  Created by Alex Zhang on 2021/3/8.
 //  Copyright © 2021 Alex Zhang. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "Header.h"
 
-@interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+@interface APIURL : NSObject
 
 @end
 

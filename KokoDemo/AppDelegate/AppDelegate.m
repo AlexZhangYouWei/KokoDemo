@@ -2,7 +2,7 @@
 //  AppDelegate.m
 //  KokoDemo
 //
-//  Created by Alex Zhang on 2021/3/8.
+//  Created by Alex Zhang on 2021/3/9.
 //  Copyright © 2021 Alex Zhang. All rights reserved.
 //
 
@@ -17,6 +17,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init]
+                                      forBarPosition:UIBarPositionAny
+                                          barMetrics:UIBarMetricsDefault];
+
+    [[UINavigationBar appearance] setShadowImage:[[UIImage alloc] init]];
     return YES;
 }
 

@@ -1,24 +1,134 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Pew-Vo-f40">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="AxI-SM-7hj">
+                        <leftBarButtonItems>
+                            <barButtonItem title="Item" image="icNavPinkWithdraw" landscapeImage="icNavPinkWithdraw" id="d6K-xc-W5u"/>
+                            <barButtonItem title="Item" image="icNavPinkTransfer" id="GOk-kD-c8i"/>
+                        </leftBarButtonItems>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="icNavPinkScan" id="Vft-a9-ZJ0"/>
+                    </navigationItem>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="3236.2318840579715" y="-643.20652173913049"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="IH4-FT-YAY">
+            <objects>
+                <viewController id="v7r-ci-fqb" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="TN3-QF-QaV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="uno-w4-gJU"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="icTabbarProductsOff" id="rlc-h3-vv5"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gRg-Ct-jpF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2329" y="104"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Bm5-9M-TvT">
+            <objects>
+                <viewController id="3Kl-lt-vj0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="woV-ch-l8f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="q0C-tK-Xan"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="icTabbarManageOff" id="Rsh-9K-D61"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AVq-5f-YHY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="948" y="1018"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4NT-Qk-Umi">
+            <objects>
+                <viewController id="6eq-OO-Jsu" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ph9-FK-DcG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="FaZ-nc-YTm"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="icTabbarSettingOff" id="JJL-LU-ZDJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ycl-sl-73X" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2329" y="934"/>
+        </scene>
+        <!--Custom Tab Bar View Controller-->
+        <scene sceneID="kll-ic-UrR">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="Pew-Vo-f40" customClass="CustomTabBarViewController" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="BsI-qP-wKV"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="imgTabbarBg" id="U6h-i6-ub0">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="v7r-ci-fqb" kind="relationship" relationship="viewControllers" id="5Dj-BA-ILj"/>
+                        <segue destination="BYJ-0h-bLR" kind="relationship" relationship="viewControllers" id="JGU-ej-8KZ"/>
+                        <segue destination="3Kl-lt-vj0" kind="relationship" relationship="viewControllers" id="Aw1-i6-kNv"/>
+                        <segue destination="6eq-OO-Jsu" kind="relationship" relationship="viewControllers" id="Gh7-cR-SIL"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fjz-Z1-1tP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="949" y="71"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="C4z-RI-1AB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BYJ-0h-bLR" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" tag="1" title="" image="icTabbarFriendsOn" landscapeImage="icTabbarFriendsOn" selectedImage="icTabbarFriendsOn" id="lc7-ES-cOE"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="xEK-0q-cYg">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.9882352941176471" green="0.9882352941176471" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YFD-IT-UkD"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="GoQ-j9-ohN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2328.985507246377" y="-643.20652173913049"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icNavPinkScan" width="24" height="24"/>
+        <image name="icNavPinkTransfer" width="24" height="24"/>
+        <image name="icNavPinkWithdraw" width="24" height="24"/>
+        <image name="icTabbarFriendsOn" width="28" height="46"/>
+        <image name="icTabbarManageOff" width="28" height="46"/>
+        <image name="icTabbarProductsOff" width="28" height="46"/>
+        <image name="icTabbarSettingOff" width="28" height="46"/>
+        <image name="imgTabbarBg" width="375" height="68"/>
+    </resources>
 </document>
