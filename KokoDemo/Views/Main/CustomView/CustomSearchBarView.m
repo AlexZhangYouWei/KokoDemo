@@ -8,39 +8,39 @@
 
 #import "CustomSearchBarView.h"
 
-@interface CustomSearchBarView()<UISearchBarDelegate>
-{
-    UIImageView *imageView;
-}
+@interface CustomSearchBarView ()
+
+@property (nonatomic, strong) UIImageView *actionImageView;
 
 @end
 
 @implementation CustomSearchBarView
 
+- (instancetype)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+        [self setup];
+    }
+    return self;
+}
 
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-    [self setup];
-    [self markUI];
-    
+- (instancetype)initWithCoder:(NSCoder *)coder {
+    self = [super initWithCoder:coder];
+    if (self) {
+        [self setup];
+    }
+    return self;
 }
 
 - (void)setup {
-    imageView = [[UIImageView alloc] initWithFrame:CGRectZero];
-
+    self.actionImageView = [[UIImageView alloc] initWithFrame:CGRectZero];
+    self.actionImageView.image = [UIImage imageNamed:@"icBtnAddFriends"];
+    [self addSubview:self.actionImageView];
 }
 
-- (void)markUI {
-    [self setImageView];
+- (void)layoutSubviews {
+    [super layoutSubviews];
+    self.actionImageView.frame = CGRectMake(321, 5, 24, 24);
 }
-
-- (void)setImageView {
-    imageView.frame = CGRectMake(321, 5, 24, 24);
-    imageView.image = [UIImage imageNamed:@"icBtnAddFriends"];
-    [self addSubview:imageView];
-}
-
-
-
 
 @end

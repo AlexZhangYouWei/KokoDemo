@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B100000125F0000000000001 /* CustomSearchBarViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B100000225F0000000000002 /* CustomSearchBarViewTests.m */; };
 		FA33690625F9FB7D00C6ACC5 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA33690525F9FB7D00C6ACC5 /* TestViewController.m */; };
 		FA3E0D4925F8B2FB000018B8 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3E0D4725F8B2FB000018B8 /* CustomTableViewCell.m */; };
 		FA3E0D4A25F8B2FB000018B8 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3E0D4825F8B2FB000018B8 /* CustomTableViewCell.xib */; };
@@ -43,7 +44,20 @@
 		FAFEC7AD25F67393004B8F5A /* FriendParser.m in Sources */ = {isa = PBXBuildFile; fileRef = FAFEC7AC25F67393004B8F5A /* FriendParser.m */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B100001025F0000000000010 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAAF41C425F61E2E0020DB95 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAAF41CB25F61E2E0020DB95;
+			remoteInfo = KokoDemo;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		B100000025F0000000000000 /* KokoDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = KokoDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B100000225F0000000000002 /* CustomSearchBarViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomSearchBarViewTests.m; sourceTree = "<group>"; };
+		B100000325F0000000000003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA33690425F9FB7D00C6ACC5 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		FA33690525F9FB7D00C6ACC5 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		FA3E0D4625F8B2FB000018B8 /* CustomTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
@@ -114,6 +128,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B100000725F0000000000007 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAAF41C925F61E2E0020DB95 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -148,6 +169,7 @@
 			children = (
 				FAAF41CE25F61E2E0020DB95 /* KokoDemo */,
 				FAAF41CD25F61E2E0020DB95 /* Products */,
+				B100000425F0000000000004 /* KokoDemoTests */,
 			);
 			sourceTree = "<group>";
 		};
@@ -155,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				FAAF41CC25F61E2E0020DB95 /* KokoDemo.app */,
+				B100000025F0000000000000 /* KokoDemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -325,9 +348,35 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
+		B100000425F0000000000004 /* KokoDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				B100000225F0000000000002 /* CustomSearchBarViewTests.m */,
+				B100000325F0000000000003 /* Info.plist */,
+			);
+			path = KokoDemoTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B100000625F0000000000006 /* KokoDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B100000F25F000000000000F /* Build configuration list for PBXNativeTarget "KokoDemoTests" */;
+			buildPhases = (
+				B100000525F0000000000005 /* Sources */,
+				B100000725F0000000000007 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B100001225F0000000000012 /* PBXTargetDependency */,
+			);
+			name = KokoDemoTests;
+			productName = KokoDemoTests;
+			productReference = B100000025F0000000000000 /* KokoDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		FAAF41CB25F61E2E0020DB95 /* KokoDemo */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = FAAF41E525F61E300020DB95 /* Build configuration list for PBXNativeTarget "KokoDemo" */;
@@ -356,6 +405,10 @@
 				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = "Alex Zhang";
 				TargetAttributes = {
+					B100000625F0000000000006 = {
+						CreatedOnToolsVersion = 11.2.1;
+						TestTargetID = FAAF41CB25F61E2E0020DB95;
+					};
 					FAAF41CB25F61E2E0020DB95 = {
 						CreatedOnToolsVersion = 11.2.1;
 					};
@@ -377,6 +430,7 @@
 			projectRoot = "";
 			targets = (
 				FAAF41CB25F61E2E0020DB95 /* KokoDemo */,
+				B100000625F0000000000006 /* KokoDemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -397,6 +451,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		B100000525F0000000000005 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B100000125F0000000000001 /* CustomSearchBarViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		FAAF41C825F61E2E0020DB95 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -453,6 +515,14 @@
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
+
+/* Begin PBXTargetDependency section */
+		B100001225F0000000000012 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAAF41CB25F61E2E0020DB95 /* KokoDemo */;
+			targetProxy = B100001025F0000000000010 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		FAAF41E325F61E300020DB95 /* Debug */ = {
@@ -601,6 +671,56 @@
 			};
 			name = Release;
 		};
+		B100000D25F000000000000D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = KokoDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = alex.KokoDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KokoDemo.app/KokoDemo";
+				CLANG_ENABLE_MODULES = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+			};
+			name = Debug;
+		};
+		B100000E25F000000000000E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = KokoDemoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = alex.KokoDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/KokoDemo.app/KokoDemo";
+				CLANG_ENABLE_MODULES = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -618,6 +738,15 @@
 			buildConfigurations = (
 				FAAF41E625F61E300020DB95 /* Debug */,
 				FAAF41E725F61E300020DB95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B100000F25F000000000000F /* Build configuration list for PBXNativeTarget "KokoDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B100000D25F000000000000D /* Debug */,
+				B100000E25F000000000000E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
