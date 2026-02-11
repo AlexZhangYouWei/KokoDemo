@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		FA33690625F9FB7D00C6ACC5 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = FA33690525F9FB7D00C6ACC5 /* TestViewController.m */; };
+		A1B2C3010000000000000001 /* PhotoCoachViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3010000000000000011 /* PhotoCoachViewController.swift */; };
+		A1B2C3010000000000000002 /* PhotoCoachViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3010000000000000012 /* PhotoCoachViewModel.swift */; };
+		A1B2C3010000000000000003 /* VisionFaceDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3010000000000000013 /* VisionFaceDetector.swift */; };
 		FA3E0D4925F8B2FB000018B8 /* CustomTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3E0D4725F8B2FB000018B8 /* CustomTableViewCell.m */; };
 		FA3E0D4A25F8B2FB000018B8 /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA3E0D4825F8B2FB000018B8 /* CustomTableViewCell.xib */; };
 		FA3E0D5425F9AB3F000018B8 /* InviteListView.m in Sources */ = {isa = PBXBuildFile; fileRef = FA3E0D5325F9AB3F000018B8 /* InviteListView.m */; };
@@ -46,6 +49,9 @@
 /* Begin PBXFileReference section */
 		FA33690425F9FB7D00C6ACC5 /* TestViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		FA33690525F9FB7D00C6ACC5 /* TestViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
+		A1B2C3010000000000000011 /* PhotoCoachViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCoachViewController.swift; sourceTree = "<group>"; };
+		A1B2C3010000000000000012 /* PhotoCoachViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCoachViewModel.swift; sourceTree = "<group>"; };
+		A1B2C3010000000000000013 /* VisionFaceDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VisionFaceDetector.swift; sourceTree = "<group>"; };
 		FA3E0D4625F8B2FB000018B8 /* CustomTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CustomTableViewCell.h; sourceTree = "<group>"; };
 		FA3E0D4725F8B2FB000018B8 /* CustomTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CustomTableViewCell.m; sourceTree = "<group>"; };
 		FA3E0D4825F8B2FB000018B8 /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
@@ -124,11 +130,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A1B2C3010000000000000021 /* PhotoCoach */ = {
+			isa = PBXGroup;
+			children = (
+				A1B2C3010000000000000011 /* PhotoCoachViewController.swift */,
+				A1B2C3010000000000000012 /* PhotoCoachViewModel.swift */,
+				A1B2C3010000000000000013 /* VisionFaceDetector.swift */,
+			);
+			path = PhotoCoach;
+			sourceTree = "<group>";
+		};
 		FA33690325F9FB6F00C6ACC5 /* TestView */ = {
 			isa = PBXGroup;
 			children = (
 				FA33690425F9FB7D00C6ACC5 /* TestViewController.h */,
 				FA33690525F9FB7D00C6ACC5 /* TestViewController.m */,
+				A1B2C3010000000000000021 /* PhotoCoach */,
 			);
 			path = TestView;
 			sourceTree = "<group>";
@@ -423,7 +440,9 @@
 				FAFEC7AD25F67393004B8F5A /* FriendParser.m in Sources */,
 				FA3E0D5825F9C196000018B8 /* CustomSearchBarView.m in Sources */,
 				FAB73A4C25F77D0F000E397E /* UserInfoFetcher.m in Sources */,
-				FA33690625F9FB7D00C6ACC5 /* TestViewController.m in Sources */,
+				A1B2C3010000000000000001 /* PhotoCoachViewController.swift in Sources */,
+				A1B2C3010000000000000002 /* PhotoCoachViewModel.swift in Sources */,
+				A1B2C3010000000000000003 /* VisionFaceDetector.swift in Sources */,
 				FA798F3F25F8A707002DE3E9 /* CustomTabBarViewController.m in Sources */,
 				FADF733525F901020099B920 /* CustomLabel.m in Sources */,
 				FA798F2025F87CC4002DE3E9 /* MainViewController.m in Sources */,
@@ -506,7 +525,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -559,7 +578,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -570,6 +589,7 @@
 		FAAF41E625F61E300020DB95 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6GH2ZWT255;
@@ -580,6 +600,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = alex.KokoDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -587,6 +608,7 @@
 		FAAF41E725F61E300020DB95 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 6GH2ZWT255;
@@ -597,6 +619,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = alex.KokoDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

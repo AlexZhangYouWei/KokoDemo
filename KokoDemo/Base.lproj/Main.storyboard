@@ -139,7 +139,7 @@
         <!--Test View Controller-->
         <scene sceneID="4NT-Qk-Umi">
             <objects>
-                <viewController id="6eq-OO-Jsu" customClass="TestViewController" sceneMemberID="viewController">
+                <viewController id="6eq-OO-Jsu" customClass="PhotoCoachViewController" customModule="KokoDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ph9-FK-DcG">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
